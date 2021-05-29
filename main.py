@@ -1,6 +1,7 @@
 from analyzer.vader_analyzer import *
 from analyzer.data import *
 from crawler.get_reddit import *
+from price_tracker.get_price import *
 
 query               = "btc"             # Add your query
 duration            = "30d"             # Select the timeframe. Epoch value or Integer + "s,m,h,d" (i.e. "second", "minute", "hour", "day")
@@ -17,3 +18,5 @@ comments = search_subs_reddit(q=query,
                    subreddit=subs)
 
 scores = analyze_sentences(comments)
+
+current_btc_price = get_coingecko_price()
