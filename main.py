@@ -47,9 +47,9 @@ btc_price_21d = get_coingecko_price_history(date21d.strftime("%d-%m-%Y"))
 btc_price_14d = get_coingecko_price_history(date14d.strftime("%d-%m-%Y"))
 btc_price_7d = get_coingecko_price_history(date7d.strftime("%d-%m-%Y"))
 
-btc_price_22d = get_coingecko_price_history((date21d + datetime.timedelta(days=1)).strftime("%d-%m-%Y"))
-btc_price_15d = get_coingecko_price_history((date14d + datetime.timedelta(days=1)).strftime("%d-%m-%Y"))
-btc_price_8d = get_coingecko_price_history((date7d + datetime.timedelta(days=1)).strftime("%d-%m-%Y"))
+btc_price_22d = get_coingecko_price_history((date21d - datetime.timedelta(days=1)).strftime("%d-%m-%Y"))
+btc_price_15d = get_coingecko_price_history((date14d - datetime.timedelta(days=1)).strftime("%d-%m-%Y"))
+btc_price_8d = get_coingecko_price_history((date7d - datetime.timedelta(days=1)).strftime("%d-%m-%Y"))
 
 diff1 = btc_price_22d - btc_price_21d
 diff2 = btc_price_15d - btc_price_14d
