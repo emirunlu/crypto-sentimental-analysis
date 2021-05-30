@@ -20,5 +20,6 @@ def search_subs_reddit(**kwargs):
 
 def utc_to_epoch(utc_date):
     date = datetime.datetime.strptime(utc_date, "%d-%m-%y")
+    # date = utc_date
     epoch = (date - unix_epoch).total_seconds()
     return int(epoch)

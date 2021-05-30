@@ -14,4 +14,5 @@ def analyze_sentences(sents):
         compound_sum += compound
         # print("{:-<65} {}".format(sentence, str(vs)))
     average_score = compound_sum / len(sents)
-    print("Average Compound Score: ", average_score)
+    # print("Average Compound Score: ", average_score)
+    return average_score
