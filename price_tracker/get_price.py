@@ -11,4 +11,4 @@ def get_coingecko_price():
 def get_coingecko_price_history(date):
     cg = CoinGeckoAPI()
     price = cg.get_coin_history_by_id(id=COIN, date=date)
-    return price["market_data"]["current_price"]["usd"]
+    return price["market_data"]["current_price"][CURRENCY]
